@@ -3,6 +3,14 @@
     <body>
         <%- include('./partials/nav.ejs') %>
         <h1>BST Generator</h1>
+        <br />
+        <form action="/userTree" method="post">
+            <label>
+                Enter Comma Separated Numbers
+                <input type="text" id="id" name="numbers" />
+            </label>
+            <button>Submit</button>
+        </form>
     </body>
     <%- include('./partials/foot.ejs') %>
 </html>
