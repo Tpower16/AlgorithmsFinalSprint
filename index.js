@@ -14,7 +14,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/userTree", async (req, res) => {
-    // await actorsDal.addActor(req.body.firstName, req.body.lastName);
     nums = await req.body.numbers;
     numStringArray = nums.split(",");
     arrOfNum = numStringArray.map((str) => {
@@ -28,7 +27,6 @@ app.post("/userTree", async (req, res) => {
             maple.insert(arrOfNum[n]);
         }
     } catch {
-        // log this error to an error log file.
         res.render("503");
     }
     console.log(treeify.asTree(maple, true));
